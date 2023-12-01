@@ -32,10 +32,7 @@ public class AudioManager : MonoBehaviour
             PlayerPrefs.SetFloat("background volume", 1);
             Load();
         }
-        else
-        {
-            Load();
-        }
+       
 
        
 

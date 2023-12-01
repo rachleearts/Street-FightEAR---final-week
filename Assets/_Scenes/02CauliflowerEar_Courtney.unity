@@ -2941,7 +2941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &902732693
 Transform:
   m_ObjectHideFlags: 0
@@ -2966,7 +2966,7 @@ BoxCollider:
   m_GameObject: {fileID: 902732692}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2977,7 +2977,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902732692}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3027,7 +3027,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902732692}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc0bab8b470b6184cba085e4f4d17797, type: 3}
   m_Name: 
@@ -3047,6 +3047,7 @@ MonoBehaviour:
   HB3: {fileID: 1935616267}
   HB4: {fileID: 1010969065}
   HB5: {fileID: 1361267800}
+  gloveCursor: {fileID: 0}
 --- !u!1 &906723781
 GameObject:
   m_ObjectHideFlags: 0
@@ -3468,6 +3469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18fd54f4881196647971a15b96c71467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HitsTwo: {fileID: 0}
 --- !u!1 &1010969065
 GameObject:
   m_ObjectHideFlags: 0
@@ -4818,6 +4820,7 @@ GameObject:
   - component: {fileID: 1580418889}
   - component: {fileID: 1580418888}
   - component: {fileID: 1580418887}
+  - component: {fileID: 1580418890}
   m_Layer: 5
   m_Name: BtnYes
   m_TagString: Untagged
@@ -4890,9 +4893,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Quit
+      - m_Target: {fileID: 1580418890}
+        m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
+        m_MethodName: quitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4940,6 +4943,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580418885}
   m_CullTransparentMesh: 1
+--- !u!114 &1580418890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580418885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3063cab1b0cbf0a4395c12d0df08d2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1597873190
 GameObject:
   m_ObjectHideFlags: 0

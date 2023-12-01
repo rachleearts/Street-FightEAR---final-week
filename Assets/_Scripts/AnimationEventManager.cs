@@ -5,14 +5,14 @@ using UnityEngine;
 public class AnimationEventManager : MonoBehaviour
 {
     
-    private HitsTwo HitsTwo;
+    public HitsTwo HitsTwo;
     
     // Start is called before the first frame update
     void Start()
     {
-        HitsTwo = FindObjectOfType<HitsTwo>();
+        //HitsTwo = FindObjectOfType<HitsTwo>();
 
-        HitsTwo.enabled = false;
+        //HitsTwo.enabled = false;
     }
 
     public void EnableHitsScript()
