@@ -1,0 +1,50 @@
+fileFormatVersion: 2
+guid: 3e76f930c787505429cc011c328dd536
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - eyes: {instanceID: 0}
+  - hair: {instanceID: 0}
+  - face: {instanceID: 0}
+  - skull: {instanceID: 0}
+  - earNormalToHema1: {instanceID: 0}
+  - earNormalToHema2: {instanceID: 0}
+  - earHemaToShrunk: {instanceID: 0}
+  - earShrunkToCauli: {instanceID: 0}
+  - earCover: {instanceID: 0}
+  - earDrum: {instanceID: 0}
+  - earDark: {instanceID: 0}
+  - cartilage: {instanceID: 0}
+  - arteryProximal: {instanceID: 0}
+  - arteryDistal: {instanceID: 0}
+  - blood1: {instanceID: 0}
+  - blood2: {instanceID: 0}
+  - bloodClot: {instanceID: 0}
+  - skullMat1: {fileID: 2100000, guid: ad424e6e29c4399429449bf400cc6f19, type: 2}
+  - earMat1: {fileID: 2100000, guid: 3428b09d693918446bcaa2a86bdc5c7e, type: 2}
+  - earMat2: {fileID: 2100000, guid: 869fba5a7230fd2449643b7b0cd5ddac, type: 2}
+  - skinMat: {fileID: 2100000, guid: f184247fabfed1645bfbb32de8daa949, type: 2}
+  - skinTransparentMat: {fileID: 2100000, guid: 2b532b3d656db86438f4b485de04d765, type: 2}
+  - cartilageMat1: {fileID: 2100000, guid: eb0827f19e39b224fb17bd8dce0ad15f, type: 2}
+  - cartilageMat2: {fileID: 2100000, guid: 29635be2c1716524686adc2e88fea23c, type: 2}
+  - arteryMat1: {fileID: 2100000, guid: db2c579db5b22674e94b1c6c77872115, type: 2}
+  - arteryMat2: {fileID: 2100000, guid: 48b6f85a3581fba4486b49066a5e3be1, type: 2}
+  - bloodMat: {fileID: 2100000, guid: 50f2c1e264df9384aae5009c15883276, type: 2}
+  - transparentMat: {fileID: 2100000, guid: 7ed70fce6d8894149865558e48764cdb, type: 2}
+  - transparentPartMat: {fileID: 2100000, guid: 2b8a7f840a16b3845965e858826d2ff7, type: 2}
+  - darkMat: {fileID: 2100000, guid: a4edaed33bc243d4e9ea7adab5ee9bb8, type: 2}
+  - earTexture: {instanceID: 0}
+  - holdingTexture: {instanceID: 0}
+  - arteryDistalAnim: {instanceID: 0}
+  - earNormalToHemaAnim: {instanceID: 0}
+  - earHemaToShrunkAnim: {instanceID: 0}
+  - earShrunkToCauliAnim: {instanceID: 0}
+  - cartilageAnim: {instanceID: 0}
+  - blood1Part: {instanceID: 0}
+  - blood2Part: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
