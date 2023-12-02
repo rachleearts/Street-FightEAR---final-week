@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 public class QuizHealth : MonoBehaviour
 {
     public int quizHealth = 4;
+
+    public int tallyScore = 0;
     public GameObject highhealthBar;
     public GameObject mediumhealthBar;
     public GameObject lowhealthBar;
@@ -15,9 +17,6 @@ public class QuizHealth : MonoBehaviour
     private GameObject wellDone;
 
     private GameObject submitButton;
-
-
-   
   
 
     public void ChangeBar()
@@ -54,7 +53,8 @@ public class QuizHealth : MonoBehaviour
       
       public void OnClick()
       {
-         if (quizHealth > 3)
+
+         if (tallyScore > 4)
          {
             GameObject.Find("PanelEarOne").SetActive(false);
 
@@ -94,4 +94,9 @@ public class QuizHealth : MonoBehaviour
             submitButton.SetActive(false);
          }
       }
+
+
+
+
+     
 }

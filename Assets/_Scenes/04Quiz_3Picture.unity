@@ -3889,6 +3889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quizHealth: 4
+  tallyScore: 0
   highhealthBar: {fileID: 1526510021}
   mediumhealthBar: {fileID: 2113333755}
   lowhealthBar: {fileID: 1874499332}
@@ -9346,8 +9347,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -144.1, y: -4}
-  m_SizeDelta: {x: 125.93201, y: 28}
+  m_AnchoredPosition: {x: -145.2, y: -2.5}
+  m_SizeDelta: {x: 110.5186, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &2045173861
 BoxCollider2D:

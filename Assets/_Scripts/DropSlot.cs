@@ -20,6 +20,7 @@ public class DropSlot : MonoBehaviour, IDropHandler
         Debug.Log("on drop");
         if (eventData.pointerDrag.GetComponent<DragDrop>().id == id) 
             {
+                GameObject.Find("PanelPictureQuiz").GetComponent<QuizHealth>().tallyScore = GameObject.Find("PanelPictureQuiz").GetComponent<QuizHealth>().tallyScore + 1;
                 Debug.Log("correct");
                 //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = this.GetComponent<RectTransform>().anchoredPosition;
                 eventData.pointerDrag.GetComponent<RectTransform>().transform.position = this.GetComponent<RectTransform>().transform.position;
