@@ -45,8 +45,8 @@ public class QuizHealth : MonoBehaviour
                         notQuite.SetActive(true);
                         wellDone = GameObject.Find("TxtWellDone");
                         wellDone.SetActive(false);
-                        GameObject.Find("PanelEarOne").SetActive(false);
-                        submitButton = GameObject.Find("BtnSubmit");
+                        GameObject.Find("PanelEarPicture").SetActive(false);
+                        submitButton = GameObject.Find("BtnConfirm");
                         submitButton.SetActive(false);
                         break;
                     }
@@ -76,7 +76,7 @@ public class QuizHealth : MonoBehaviour
 
          else
          {
-            GameObject.Find("PanelEarOne").SetActive(false);
+            GameObject.Find("PanelEarPicture").SetActive(false);
             
             finalPanel.SetActive(true);
 
@@ -90,7 +90,7 @@ public class QuizHealth : MonoBehaviour
             mediumhealthBar.SetActive(false);
             highhealthBar.SetActive(false);
 
-            submitButton = GameObject.Find("BtnSubmit");
+            submitButton = GameObject.Find("BtnConfirm");
             submitButton.SetActive(false);
          }
       }
