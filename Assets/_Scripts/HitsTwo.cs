@@ -40,17 +40,17 @@ public class HitsTwo : MonoBehaviour
     // }
 
     void Update()
+   //only able to interact with gameobject.ear when between the "break" of one case and the start of the next case.
     {
-        if(Input.GetMouseButtonDown(0) && !isPlaying)
+        if (Input.GetMouseButtonDown(0) && !isPlaying) //need to put in a constraint for GetMouseButtonDown in order for it to act like onMouseDown. Can not use OMD due to function property.
         {
             StartCoroutine(hits());
-            totalHit ++;
+            totalHit++;
         }
-        
-        
     }
 
 	private void OnMouseEnter()
+    //Cursur changes from mouse to boxing glove when over capsul colider surrounding ear model
 	{
         Cursor.SetCursor(gloveCursor, Vector2.zero, CursorMode.Auto);
 	}
@@ -61,9 +61,11 @@ public class HitsTwo : MonoBehaviour
 	}
 
 	IEnumerator hits()
+    //start of coroutine
     {
         isPlaying = true;
          switch (totalHit)
+        //start of cases that allow for sucessive "hits" to pay out with audio, anim., sprites and panels.
         {
             case 1:
             Debug.Log("hit1");
@@ -74,8 +76,6 @@ public class HitsTwo : MonoBehaviour
             testAnimationScript.EarAnim2();
             //if adio hasnt played bool = false if audio has played bool = true if 
             //fix in audio manager to play random range once 
-            //HealthBar
-            //Animation
             break;
 
             case 2:
@@ -126,9 +126,13 @@ public class HitsTwo : MonoBehaviour
             testAnimationScript.EarAnim7();
             break;
 
+            /*case 7:
+            Debug.Log("hit7");
+            testAnimationScript.EarAnim8();
+            break;*/
 
         }
-            yield return new WaitForSeconds (1.5f);
+            yield return new WaitForSeconds (1.5f); //int=how long earObj is inactive for player between "hits" 
             isPlaying = false;
 
             
