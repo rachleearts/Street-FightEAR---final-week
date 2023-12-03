@@ -1808,6 +1808,7 @@ MonoBehaviour:
   blood1: {fileID: 649818240}
   blood2: {fileID: 529489887}
   bloodClot: {fileID: 6747248637988993776}
+  fadeToBlack: {fileID: 411321234}
   skullMat1: {fileID: 2100000, guid: eae4c73c28b8d8242b30b8710444ab85, type: 2}
   earMat1: {fileID: 2100000, guid: 0dc22b4482beaee48b33cb92a52dacfd, type: 2}
   earMat2: {fileID: 2100000, guid: c16d1b7787d0fde4faaa0d9e757876f8, type: 2}
@@ -1820,6 +1821,7 @@ MonoBehaviour:
   bloodMat: {fileID: 2100000, guid: 56e3dced02d4ebc43a41998a7a6f46e8, type: 2}
   transparentMat: {fileID: 2100000, guid: c3816ba813fada84b8e10889cc21b3ea, type: 2}
   transparentPartMat: {fileID: 2100000, guid: 1b409d598afeee443b3d9837c8bd9fa9, type: 2}
+  blackMat: {fileID: 2100000, guid: d375383ef87fd0146a174994af3f95c0, type: 2}
   earTexture: {fileID: 2800000, guid: 3efe86e436cd19244b74e59bb133aa4b, type: 3}
   holdingTexture: {fileID: 2800000, guid: 90e9439002a38c14abae586f1fbdb076, type: 3}
   arteryDistalAnim: {fileID: 6750070404181465164}
@@ -1827,6 +1829,7 @@ MonoBehaviour:
   earHemaToShrunkAnim: {fileID: 6883133768619166636}
   earShrunkToCauliAnim: {fileID: 7918687375621356569}
   cartilageAnim: {fileID: 6750563014881006509}
+  fadeToBlackAnim: {fileID: 2041267299}
   blood1Part: {fileID: 649818242}
   blood2Part: {fileID: 529489889}
   fadeSpeed: 1
@@ -2298,6 +2301,104 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408239391}
   m_CullTransparentMesh: 1
+--- !u!1 &411321234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 411321238}
+  - component: {fileID: 411321237}
+  - component: {fileID: 411321236}
+  - component: {fileID: 411321235}
+  m_Layer: 0
+  m_Name: black
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!64 &411321235
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411321234}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &411321236
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411321234}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c3816ba813fada84b8e10889cc21b3ea, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &411321237
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411321234}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &411321238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411321234}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -8.26, y: 15.776001, z: -0.26399994}
+  m_LocalScale: {x: 1.3090056, y: 1, z: 2.02158}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &451286232
 GameObject:
   m_ObjectHideFlags: 0
@@ -15736,6 +15837,7 @@ MonoBehaviour:
   blood1: {fileID: 649818240}
   blood2: {fileID: 529489887}
   bloodClot: {fileID: 6747248637988993776}
+  fadeToBlack: {fileID: 0}
   skullMat1: {fileID: 2100000, guid: eae4c73c28b8d8242b30b8710444ab85, type: 2}
   earMat1: {fileID: 2100000, guid: 0dc22b4482beaee48b33cb92a52dacfd, type: 2}
   earMat2: {fileID: 2100000, guid: c16d1b7787d0fde4faaa0d9e757876f8, type: 2}
@@ -15748,6 +15850,7 @@ MonoBehaviour:
   bloodMat: {fileID: 2100000, guid: 56e3dced02d4ebc43a41998a7a6f46e8, type: 2}
   transparentMat: {fileID: 2100000, guid: c3816ba813fada84b8e10889cc21b3ea, type: 2}
   transparentPartMat: {fileID: 2100000, guid: 1b409d598afeee443b3d9837c8bd9fa9, type: 2}
+  blackMat: {fileID: 0}
   earTexture: {fileID: 2800000, guid: 3efe86e436cd19244b74e59bb133aa4b, type: 3}
   holdingTexture: {fileID: 2800000, guid: 90e9439002a38c14abae586f1fbdb076, type: 3}
   arteryDistalAnim: {fileID: 6750070404181465164}
@@ -15755,6 +15858,7 @@ MonoBehaviour:
   earHemaToShrunkAnim: {fileID: 6883133768619166636}
   earShrunkToCauliAnim: {fileID: 7918687375621356569}
   cartilageAnim: {fileID: 6750563014881006509}
+  fadeToBlackAnim: {fileID: 0}
   blood1Part: {fileID: 649818242}
   blood2Part: {fileID: 529489889}
   fadeSpeed: 1
@@ -18183,6 +18287,7 @@ GameObject:
   - component: {fileID: 2041267298}
   - component: {fileID: 2041267297}
   - component: {fileID: 2041267296}
+  - component: {fileID: 2041267299}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -18256,6 +18361,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!95 &2041267299
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041267295}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f3453c8a1e101d04a85959b1b1fb88a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2053683131
 GameObject:
   m_ObjectHideFlags: 0

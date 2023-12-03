@@ -5,13 +5,13 @@ using UnityEngine;
 public class TestAnimationScript : MonoBehaviour
 {
     public GameObject eyes, hair, face, skull, earNormalToHema1, earNormalToHema2, earHemaToShrunk, earShrunkToCauli, earCover, earDrum1, earDrum2,
-        earCanal, cartilage, arteryProximal, arteryDistal, blood1, blood2, bloodClot;
+        earCanal, cartilage, arteryProximal, arteryDistal, blood1, blood2, bloodClot, fadeToBlack;
 
     Renderer eyesRen, hairRen, faceRen, earNormalToHema1Ren, earNormalToHema2Ren, earCoverRen, earCanalRen, earShrunkToCauliRen,
-        cartilageRen, arteryProximalRen, arteryDistalRen, bloodClotRen;
+        cartilageRen, arteryProximalRen, arteryDistalRen, bloodClotRen, fadeToBlackRen;
 
     public Material skullMat1, earMat1, earMat2, skinMat, skinTransparentMat, cartilageMat1, cartilageMat2,
-        arteryMat1, arteryMat2, bloodMat, transparentMat, transparentPartMat;
+        arteryMat1, arteryMat2, bloodMat, transparentMat, transparentPartMat, blackMat;
 
     private Color earNormal, earBruised;
 
@@ -19,7 +19,7 @@ public class TestAnimationScript : MonoBehaviour
     public Texture holdingTexture;
     //can earMat2 inherit the alpha properties of earMat1?
 
-    public Animator arteryDistalAnim, earNormalToHemaAnim, earHemaToShrunkAnim, earShrunkToCauliAnim, cartilageAnim;
+    public Animator arteryDistalAnim, earNormalToHemaAnim, earHemaToShrunkAnim, earShrunkToCauliAnim, cartilageAnim, fadeToBlackAnim;
 
     public ParticleSystem blood1Part, blood2Part;
 
@@ -45,8 +45,10 @@ public class TestAnimationScript : MonoBehaviour
         arteryProximalRen = arteryProximal.GetComponent<Renderer>();
         arteryDistalRen = arteryDistal.GetComponent<Renderer>();
         bloodClotRen = bloodClot.GetComponent<Renderer>();
+        fadeToBlackRen = fadeToBlack.GetComponent<Renderer>();
         earDrum1.SetActive(false);
         earDrum2.SetActive(false);
+        fadeToBlack.SetActive(false);
 
         earNormal = earNormalToHema1Ren.material.color;
         earBruised = earNormalToHema2Ren.material.color;
@@ -179,14 +181,18 @@ public class TestAnimationScript : MonoBehaviour
     }
 
     public void EarAnim8()
-    //ear drum rips
-    //MOVE TO OTHER SCRIPT
+    //camera zooms in and fades to black
     {
         Debug.Log("case 7: transition to eardrum rips");
         StartCoroutine(CrossfadeMaterial(2.0f, earCoverRen, earCoverRen.material, transparentMat));  //fade out ear cover
         StartCoroutine(CrossfadeMaterial(2.0f, earCanalRen, earCanalRen.material, skinMat));  //fade in ear canal
-        earDrum1.SetActive(true);  //turn on eardrum1
-        earDrum2.SetActive(true);  //turn on eardrum2
+        earDrum1.SetActive(true);  //turn on eardrum1 GET RID
+        earDrum2.SetActive(true);  //turn on eardrum2 GET RID
+        //call camera zoom animation
+        fadeToBlackAnim.SetTrigger("play_ZoomToEarCanal");
+        fadeToBlack.SetActive(true);
+        StartCoroutine(CrossfadeMaterial(5.0f, fadeToBlackRen, fadeToBlackRen.material, blackMat));
+
 
         //new script... scale eardrum2 to .002, .002, .002 over half a second
     }

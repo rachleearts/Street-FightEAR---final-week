@@ -126,10 +126,10 @@ public class HitsTwo : MonoBehaviour
             testAnimationScript.EarAnim7();
             break;
 
-            /*case 7:
+            case 7:
             Debug.Log("hit7");
             testAnimationScript.EarAnim8();
-            break;*/
+            break;
 
         }
             yield return new WaitForSeconds (1.5f); //int=how long earObj is inactive for player between "hits" 
