@@ -31,6 +31,9 @@ public class TestAnimationScript : MonoBehaviour
     public float fadeSpeed = 1.0f;
 
 
+    private GameManager gameManager;
+
+
     private void Awake()
     {
         eyesRen = eyes.GetComponent<Renderer>();
@@ -54,6 +57,8 @@ public class TestAnimationScript : MonoBehaviour
         earBruised = earNormalToHema2Ren.material.color;
         earBruised.a = 0.0f;
         earNormalToHema2Ren.material.color = earBruised;
+
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
     void Update()
@@ -180,6 +185,11 @@ public class TestAnimationScript : MonoBehaviour
         bloodClot.SetActive(false);  //turn off blood clot
     }
 
+    public void sceneCaller(int sceneNumber)
+        {
+            gameManager.ChangeScene(sceneNumber);
+        }
+
     public void EarAnim8()
     //camera zooms in and fades to black
     {
@@ -188,16 +198,17 @@ public class TestAnimationScript : MonoBehaviour
         StartCoroutine(CrossfadeMaterial(2.0f, earCanalRen, earCanalRen.material, skinMat));  //fade in ear canal
         earDrum1.SetActive(true);  //turn on eardrum1 GET RID
         earDrum2.SetActive(true);  //turn on eardrum2 GET RID
-        //call camera zoom animation
         fadeToBlackAnim.SetTrigger("play_ZoomToEarCanal");
         fadeToBlack.SetActive(true);
         StartCoroutine(CrossfadeMaterial(5.0f, fadeToBlackRen, fadeToBlackRen.material, blackMat));
-
-
-        //new script... scale eardrum2 to .002, .002, .002 over half a second
     }
         
-       
+    /* public void TransitionToEardrum()
+    {
+        StartCoroutine(SceneTransitionWait(sceneCaller(3)));
+    } */
+
+
     private IEnumerator CrossfadeMaterial(float duration, Renderer ren, Material mat1, Material mat2)
     //fades one material into another over a defined duration of time
     {
@@ -212,7 +223,16 @@ public class TestAnimationScript : MonoBehaviour
 
     }
 
-}
+    /* private IEnumerator SceneTransitionWait()
+    //fades one material into another over a defined duration of time
+    {
+        yield return new WaitForSeconds (5f); 
+    } */
+         
+    }
+
+
+
     //https://stackoverflow.com/questions/64510141/using-a-coroutine-in-unity3d-to-fade-a-game-object-out-and-back-in-looping-inf
 
 

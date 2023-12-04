@@ -24,6 +24,7 @@ public class HitsTwo : MonoBehaviour
     private AudioManager audioManager;
 
     public Texture2D gloveCursor;
+    public RaycastHit hit;
 
     private bool isPlaying;
     // Start is called before the first frame update
@@ -42,8 +43,10 @@ public class HitsTwo : MonoBehaviour
     void Update()
    //only able to interact with gameobject.ear when between the "break" of one case and the start of the next case.
     {
-        if (Input.GetMouseButtonDown(0) && !isPlaying) //need to put in a constraint for GetMouseButtonDown in order for it to act like onMouseDown. Can not use OMD due to function property.
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Input.GetMouseButtonDown(0) && Physics.Raycast(ray, out hit, 600) && hit.collider.gameObject && !isPlaying) //need to put in a constraint for GetMouseButtonDown in order for it to act like onMouseDown. Can not use OMD due to function property.
         {
+            Debug.Log("hit");
             StartCoroutine(hits());
             totalHit++;
         }
@@ -64,7 +67,7 @@ public class HitsTwo : MonoBehaviour
     //start of coroutine
     {
         isPlaying = true;
-         switch (totalHit)
+        switch (totalHit)
         //start of cases that allow for sucessive "hits" to pay out with audio, anim., sprites and panels.
         {
             case 1:
@@ -129,6 +132,7 @@ public class HitsTwo : MonoBehaviour
             case 7:
             Debug.Log("hit7");
             testAnimationScript.EarAnim8();
+            //testAnimationScript.TransitionToEardrum();
             break;
 
         }
