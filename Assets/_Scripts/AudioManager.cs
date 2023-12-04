@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
 
 {   
     public static AudioManager singleton;
-    public Slider volumeSlider = null;
+    public Slider volumeSlider;
     public GameObject audioSettings;
     public AudioSource slapCompilation;
     public AudioClip [] slapSounds;    
@@ -24,14 +24,27 @@ public class AudioManager : MonoBehaviour
         }
   
    DontDestroyOnLoad(transform.gameObject);
-    
+
+   
+
+    // if (!PlayerPrefs.HasKey("background volume"))
+    //     {
+    //         PlayerPrefs.SetFloat("background volume", 1f);
+    //         Load();
+    //     }
+       
     //if no player prefs set, set volume to 1; otherwise load player prefs
 
-    if (!PlayerPrefs.HasKey("background volume"))
-        {
-            PlayerPrefs.SetFloat("background volume", 1);
-            Load();
-        }
+    // if (!PlayerPrefs.HasKey("background volume"))
+    //     {
+    //         PlayerPrefs.SetFloat("background volume", 1);
+    //         //Load();
+    //         //Save();
+    //     }
+    // else
+    //     {
+    //         Load();
+    //     }
        
 
        
@@ -39,6 +52,15 @@ public class AudioManager : MonoBehaviour
    }
     
    //change audio volume with slider
+
+    void Start()
+    {
+        audioSettings = GameObject.Find("PanelAudio");
+        volumeSlider = audioSettings.GetComponentInChildren<Slider>();
+        volumeSlider.onValueChanged.AddListener (delegate {ValueChangeCheck ();});
+        Save();
+        //Load();
+    }
 
     public void VolumeChanger()
     {
@@ -70,6 +92,7 @@ public class AudioManager : MonoBehaviour
            volumeSlider = audioSettings.GetComponentInChildren<Slider>();
            volumeSlider.onValueChanged.AddListener (delegate {ValueChangeCheck ();});
            Load();
+           Debug.Log("Loaded");
         }
 
         public void ValueChangeCheck()

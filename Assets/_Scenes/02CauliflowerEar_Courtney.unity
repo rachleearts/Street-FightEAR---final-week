@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18103023, g: 0.25805625, b: 0.35937485, a: 1}
+  m_IndirectSpecularColor: {r: 0.17956533, g: 0.2592783, b: 0.3613275, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2162,7 +2162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64fef148ec465a4e943b6da46fe3c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 0}
+  volumeSlider: {fileID: 1775017479}
   audioSettings: {fileID: 0}
   slapCompilation: {fileID: 1135790359}
   slapSounds:
