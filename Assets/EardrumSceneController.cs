@@ -12,6 +12,7 @@ public class EardrumSceneController : MonoBehaviour
 
     public AudioSource eardrumRipSound;
 
+
     Renderer fadeToBlackRen;
 
 	private void Awake()
@@ -26,6 +27,7 @@ public class EardrumSceneController : MonoBehaviour
 
     }
 
+  
 	void Start()
 	{
         StartCoroutine(CrossfadeMaterial(5.0f, fadeToBlackRen, fadeToBlackRen.material, transparentMat));
