@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HitsTwo : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class HitsTwo : MonoBehaviour
     public GameObject HB3;
     public GameObject HB4;
     public GameObject HB5;
+    public GameObject MyCanvas;
     private AudioManager audioManager;
 
     public Texture2D gloveCursor;
@@ -34,11 +36,6 @@ public class HitsTwo : MonoBehaviour
         testAnimationScript = FindObjectOfType<TestAnimationScript>();
     }
 
-    // Update is called once per frame
-    // void OnMouseDown()
-    // {
-    //     StartCoroutine(hits());
-    // }
 
     void Update()
    //only able to interact with gameobject.ear when between the "break" of one case and the start of the next case.
@@ -131,6 +128,7 @@ public class HitsTwo : MonoBehaviour
 
             case 7:
             Debug.Log("hit7");
+            MyCanvas.SetActive(false);
             testAnimationScript.EarAnim8();
             //testAnimationScript.TransitionToEardrum();
             break;
