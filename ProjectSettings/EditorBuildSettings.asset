@@ -9,30 +9,30 @@ EditorBuildSettings:
     path: Assets/_Scenes/00Entrance.unity
     guid: 4c70177512ddc2d4aab8ebd75234db4a
   - enabled: 1
-    path: Assets/_Scenes/00Start_Final.unity
+    path: Assets/_Scenes/01Start_Final.unity
     guid: c21004bc5a63c2d41a51161f23ed9daa
   - enabled: 1
-    path: Assets/_Scenes/02CauliflowerEar_Courtney.unity
+    path: Assets/_Scenes/03CauliflowerP1.unity
     guid: 7807f8b15a90a844eaaa5fb86672e658
   - enabled: 1
-    path: Assets/_Scenes/02CauliflowerEar_Rachel.unity
+    path: Assets/_Scenes/04CauliflowerP2.unity
     guid: f96fba22b3906a54c81cd9b5a9fd9de8
   - enabled: 1
-    path: Assets/_Scenes/03EarDrum_.unity
+    path: Assets/_Scenes/05EarDrum.unity
     guid: 2e5146f4db664cb46b571711d5f6ad07
   - enabled: 1
-    path: Assets/_Scenes/04Quiz_1.unity
+    path: Assets/_Scenes/06Quiz_1.unity
     guid: f75e90758da28fb48ab9e4c82f504a65
   - enabled: 1
-    path: Assets/_Scenes/04Quiz_2Word.unity
+    path: Assets/_Scenes/07Quiz_2Word.unity
     guid: 5e71cbc39e8c38e44b2c491ead0d9385
   - enabled: 1
-    path: Assets/_Scenes/04Quiz_3Picture.unity
+    path: Assets/_Scenes/08Quiz_3Picture.unity
     guid: bfab52b407c9b6f43b94af3a298303e8
   - enabled: 0
-    path: Assets/_Scenes/05Exit.unity
+    path: Assets/_Scenes/09Exit (DELETE).unity
     guid: 1848d64f844a1044aaf245ed5e2f49ef
   - enabled: 0
-    path: Assets/_Scenes/01Fight_Empty.unity
+    path: Assets/_Scenes/02Fight.unity
     guid: afbe695fea3ee734ebf99f15dbcb5515
   m_configObjects: {}
