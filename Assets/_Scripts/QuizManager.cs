@@ -16,6 +16,12 @@ public class QuizManager : MonoBehaviour
 
     public int scoreNB = 0;
 
+    public Animator wellDone;
+    public Animator notQuite; 
+    public GameObject btnHelp;
+    public GameObject btnMenu;
+    public GameObject btnStart;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,7 +67,20 @@ public class QuizManager : MonoBehaviour
             //update final score
 
             myFinalPanel.transform.GetChild(0).GetComponent<TMP_Text>().text = myFinalPanel.transform.GetChild(0).GetComponent<TMP_Text>().text + scoreNB;
+            btnHelp.SetActive(false);
+            btnStart.SetActive(false);
+            btnMenu.SetActive(false);
 
+        }
+
+        if( scoreNB > 4) 
+        {   
+
+            wellDone.SetTrigger("play_score5");
+        }
+        else
+        {
+            notQuite.SetTrigger("play_score4");
         }
     }
 }

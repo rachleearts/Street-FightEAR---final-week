@@ -56,9 +56,9 @@ public class QuizHealth : MonoBehaviour
 
          if (tallyScore > 4)
          {
-            GameObject.Find("PanelEarOne").SetActive(false);
+            GameObject.Find("PanelEarPicture").SetActive(false);
 
-            submitButton = GameObject.Find("BtnSubmit");
+            submitButton = GameObject.Find("BtnConfirm");
             submitButton.SetActive(false);
 
             finalPanel.SetActive(true);
