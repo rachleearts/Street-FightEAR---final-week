@@ -11,6 +11,7 @@ public class TransitionVidEarDrum : MonoBehaviour
     public GameObject textPanel2;
     public GameObject punchButton;
     public Animator earDrumTear;
+    public AudioSource tearTinAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,7 @@ public class TransitionVidEarDrum : MonoBehaviour
         //earDrumTear.Play();
         
         earDrumTear.SetTrigger("play_eardrum_tear");
+        tearTinAudio.Play();
 
 
     }

@@ -316,6 +316,7 @@ MonoBehaviour:
   textPanel2: {fileID: 317149889}
   punchButton: {fileID: 17838274}
   earDrumTear: {fileID: 237373790}
+  tearTinAudio: {fileID: 0}
 --- !u!1 &23227783
 GameObject:
   m_ObjectHideFlags: 0
@@ -3715,6 +3716,7 @@ MonoBehaviour:
   textPanel2: {fileID: 317149889}
   punchButton: {fileID: 17838274}
   earDrumTear: {fileID: 237373790}
+  tearTinAudio: {fileID: 1294769869}
 --- !u!1 &1005454911
 GameObject:
   m_ObjectHideFlags: 0
@@ -4765,7 +4767,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 56d315f670ecc6849968efbd4e002912, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c7a0b0c8101e13542b826198aced82d3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
