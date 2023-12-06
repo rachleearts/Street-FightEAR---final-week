@@ -13,10 +13,15 @@ public class QuizHealth : MonoBehaviour
     public GameObject lowhealthBar;
     public GameObject finalPanel;
 
-    private GameObject notQuite;
-    private GameObject wellDone;
-
     private GameObject submitButton;
+
+    public GameObject welcomeText;
+    public GameObject welcomeInstructions;
+    public GameObject quizMenu;
+    public GameObject startMenu;
+
+    public Animator wellDone;
+    public Animator notQuite; 
   
 
     public void ChangeBar()
@@ -40,10 +45,10 @@ public class QuizHealth : MonoBehaviour
                      case 1:
                         lowhealthBar.SetActive(false);
                         finalPanel.SetActive(true);
-                        notQuite = GameObject.Find("TxtNotQuite");
-                        notQuite.SetActive(true);
-                        wellDone = GameObject.Find("TxtWellDone");
-                        wellDone.SetActive(false);
+                        //notQuite = GameObject.Find("TxtNotQuite");
+                        //notQuite.SetActive(true);
+                        //wellDone = GameObject.Find("TxtWellDone");
+                        //wellDone.SetActive(false);
                         GameObject.Find("PanelEarPicture").SetActive(false);
                         submitButton = GameObject.Find("BtnConfirm");
                         submitButton.SetActive(false);
@@ -63,15 +68,22 @@ public class QuizHealth : MonoBehaviour
 
             finalPanel.SetActive(true);
 
-            wellDone = GameObject.Find("TxtWellDone");
-            wellDone.SetActive(true);
+            //wellDone = GameObject.Find("TxtWellDone");
+            //wellDone.SetActive(true);
 
-            notQuite = GameObject.Find("TxtNotQuite");
-            notQuite.SetActive(false);
+            //notQuite = GameObject.Find("TxtNotQuite");
+            //notQuite.SetActive(false);
 
             lowhealthBar.SetActive(false);
             mediumhealthBar.SetActive(false);
             highhealthBar.SetActive(false);
+
+            welcomeText.SetActive(false);
+            startMenu.SetActive(false);
+            quizMenu.SetActive(false);
+            welcomeInstructions.SetActive(false);
+
+            wellDone.SetTrigger("play_score5");
          }
 
          else
@@ -80,11 +92,11 @@ public class QuizHealth : MonoBehaviour
             
             finalPanel.SetActive(true);
 
-            notQuite = GameObject.Find("TxtNotQuite");
-            notQuite.SetActive(true);
+            //notQuite = GameObject.Find("TxtNotQuite");
+            //notQuite.SetActive(true);
 
-            wellDone = GameObject.Find("TxtWellDone");
-            wellDone.SetActive(false);
+            //wellDone = GameObject.Find("TxtWellDone");
+            //wellDone.SetActive(false);
             
             lowhealthBar.SetActive(false);
             mediumhealthBar.SetActive(false);
@@ -92,6 +104,13 @@ public class QuizHealth : MonoBehaviour
 
             submitButton = GameObject.Find("BtnConfirm");
             submitButton.SetActive(false);
+
+            welcomeText.SetActive(false);
+            startMenu.SetActive(false);
+            quizMenu.SetActive(false);
+            welcomeInstructions.SetActive(false);
+
+            notQuite.SetTrigger("play_score4");
          }
       }
 
