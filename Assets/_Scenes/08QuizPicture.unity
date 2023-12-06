@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.054923847, g: 0.1838242, b: 0.44443616, a: 1}
+  m_IndirectSpecularColor: {r: 0.054941382, g: 0.18403195, b: 0.44405246, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -157,7 +157,7 @@ RectTransform:
   - {fileID: 541388997}
   - {fileID: 231152908}
   m_Father: {fileID: 874822475}
-  m_RootOrder: 9
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -396,7 +396,7 @@ RectTransform:
   m_Children:
   - {fileID: 370573158}
   m_Father: {fileID: 874822475}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -748,7 +748,7 @@ GameObject:
   - component: {fileID: 231048523}
   - component: {fileID: 231048522}
   m_Layer: 5
-  m_Name: PanelMainMenu
+  m_Name: PanelStartMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -769,7 +769,7 @@ RectTransform:
   - {fileID: 2010234006}
   - {fileID: 1137625213}
   m_Father: {fileID: 874822475}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -960,7 +960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &236936525
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1196,7 +1196,7 @@ RectTransform:
   - {fileID: 804753018}
   - {fileID: 1703335424}
   m_Father: {fileID: 874822475}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1524,7 +1524,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1942,7 +1942,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2147,7 +2147,7 @@ RectTransform:
   - {fileID: 1859244096}
   - {fileID: 1661148054}
   m_Father: {fileID: 874822475}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -2770,7 +2770,7 @@ GameObject:
   - component: {fileID: 582642184}
   - component: {fileID: 582642183}
   m_Layer: 5
-  m_Name: BtnMainMenu
+  m_Name: BtnStartMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4206,12 +4206,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 813376336}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: quitGame
-        m_Mode: 1
+        m_MethodName: sceneCaller
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4268,7 +4268,7 @@ GameObject:
   - component: {fileID: 853952747}
   - component: {fileID: 853952746}
   m_Layer: 5
-  m_Name: BtnTryAgain
+  m_Name: BtnRetry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4357,7 +4357,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4615,7 +4615,6 @@ RectTransform:
   - {fileID: 236936525}
   - {fileID: 883763533}
   - {fileID: 1352228684}
-  - {fileID: 8351301}
   - {fileID: 257696171}
   - {fileID: 1868522485}
   - {fileID: 1847265269}
@@ -4623,6 +4622,7 @@ RectTransform:
   - {fileID: 1824881332}
   - {fileID: 231048521}
   - {fileID: 434573798}
+  - {fileID: 8351301}
   m_Father: {fileID: 1846658851}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5980,7 +5980,7 @@ GameObject:
   - component: {fileID: 1137625215}
   - component: {fileID: 1137625214}
   m_Layer: 5
-  m_Name: PanelQuitOptions
+  m_Name: PanelStartOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7937,7 +7937,7 @@ GameObject:
   - component: {fileID: 1661148056}
   - component: {fileID: 1661148055}
   m_Layer: 5
-  m_Name: PanelQuitOptions
+  m_Name: PanelQuizOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8043,7 +8043,7 @@ GameObject:
   - component: {fileID: 1664656684}
   - component: {fileID: 1664656683}
   m_Layer: 5
-  m_Name: BtnPictureQuiz
+  m_Name: BtnQuizMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8683,7 +8683,7 @@ RectTransform:
   - {fileID: 1596649082}
   - {fileID: 1869734936}
   m_Father: {fileID: 874822475}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -8888,7 +8888,7 @@ RectTransform:
   - {fileID: 1966569531}
   - {fileID: 916102759}
   m_Father: {fileID: 874822475}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -8945,7 +8945,7 @@ GameObject:
   - component: {fileID: 1859244098}
   - component: {fileID: 1859244097}
   m_Layer: 5
-  m_Name: TxtQuit
+  m_Name: TxtQuizConfirm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9101,7 +9101,7 @@ RectTransform:
   - {fileID: 267288387}
   - {fileID: 1541016485}
   m_Father: {fileID: 874822475}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -9802,7 +9802,7 @@ GameObject:
   - component: {fileID: 2010234008}
   - component: {fileID: 2010234007}
   m_Layer: 5
-  m_Name: TxtQuit
+  m_Name: TxtStartConfirm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10527,7 +10527,7 @@ GameObject:
   - component: {fileID: 2088792514}
   - component: {fileID: 2088792513}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageGameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

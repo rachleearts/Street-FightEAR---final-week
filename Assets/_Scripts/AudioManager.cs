@@ -13,8 +13,8 @@ public class AudioManager : MonoBehaviour
     public AudioSource slapCompilation;
     public AudioClip [] slapSounds;    
 
-    //dont destroy game object with background audio between scenes
 
+   //Keep a single game object with background audio to transfer between scenes
    void Awake()
    {
       if (singleton == null) {

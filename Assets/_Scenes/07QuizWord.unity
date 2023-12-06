@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.054923847, g: 0.1838242, b: 0.44443616, a: 1}
+  m_IndirectSpecularColor: {r: 0.054941382, g: 0.18403195, b: 0.44405246, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2208,7 +2208,7 @@ GameObject:
   - component: {fileID: 134020845}
   - component: {fileID: 134020848}
   m_Layer: 5
-  m_Name: BtnTryAgain
+  m_Name: BtnRetry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2229,10 +2229,10 @@ RectTransform:
   m_Father: {fileID: 1480275656}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -41}
+  m_SizeDelta: {x: 300, y: 82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134020845
 MonoBehaviour:
@@ -2285,7 +2285,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4020,7 +4020,7 @@ GameObject:
   - component: {fileID: 238908674}
   - component: {fileID: 238908673}
   m_Layer: 5
-  m_Name: PanelMainMenu
+  m_Name: PanelStartMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5697,7 +5697,7 @@ GameObject:
   - component: {fileID: 371653400}
   - component: {fileID: 371653399}
   m_Layer: 5
-  m_Name: BtnMainMenu
+  m_Name: BtnStartMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7863,7 +7863,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -9537,7 +9537,7 @@ GameObject:
   - component: {fileID: 618258910}
   - component: {fileID: 618258909}
   m_Layer: 5
-  m_Name: PanelQuitOptions
+  m_Name: PanelConfirmOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9858,10 +9858,10 @@ RectTransform:
   m_Father: {fileID: 1480275656}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -209}
+  m_SizeDelta: {x: 300, y: 82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &641141189
 MonoBehaviour:
@@ -9914,7 +9914,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -11557,7 +11557,7 @@ GameObject:
   - component: {fileID: 804932035}
   - component: {fileID: 804932034}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImageGameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13539,7 +13539,7 @@ GameObject:
   - component: {fileID: 926743318}
   - component: {fileID: 926743317}
   m_Layer: 5
-  m_Name: TxtQuit
+  m_Name: TxtStartConfirm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18132,7 +18132,7 @@ GameObject:
   - component: {fileID: 1373243184}
   - component: {fileID: 1373243187}
   m_Layer: 5
-  m_Name: BtnPictureQuiz
+  m_Name: BtnQuizMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18153,10 +18153,10 @@ RectTransform:
   m_Father: {fileID: 1480275656}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -125}
+  m_SizeDelta: {x: 300, y: 82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1373243184
 MonoBehaviour:
@@ -19223,7 +19223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1429237939
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21309,7 +21309,7 @@ GameObject:
   - component: {fileID: 1612503443}
   - component: {fileID: 1612503442}
   m_Layer: 5
-  m_Name: PanelQuitOptions
+  m_Name: PanelQuizOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21916,7 +21916,7 @@ GameObject:
   - component: {fileID: 1656538082}
   - component: {fileID: 1656538081}
   m_Layer: 5
-  m_Name: TxtQuit
+  m_Name: TxtQuizConfirm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25858,12 +25858,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2096168489}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: quitGame
-        m_Mode: 1
+        m_MethodName: sceneCaller
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

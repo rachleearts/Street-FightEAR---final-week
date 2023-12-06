@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.054923847, g: 0.1838242, b: 0.44443616, a: 1}
+  m_IndirectSpecularColor: {r: 0.054941382, g: 0.18403195, b: 0.44405246, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 405560235}
   - component: {fileID: 405560234}
   m_Layer: 5
-  m_Name: BtnMainMenu
+  m_Name: BtnStartMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1290,7 +1290,7 @@ GameObject:
   - component: {fileID: 535614393}
   - component: {fileID: 535614392}
   m_Layer: 5
-  m_Name: PanelMainMenu
+  m_Name: PanelStartMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2559,7 +2559,7 @@ GameObject:
   - component: {fileID: 1043236493}
   - component: {fileID: 1043236492}
   m_Layer: 5
-  m_Name: PanelQuitOptions
+  m_Name: PanelStartOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3095,7 +3095,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3241,7 +3241,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 6
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3920,7 +3920,7 @@ GameObject:
   - component: {fileID: 1553012447}
   - component: {fileID: 1553012446}
   m_Layer: 5
-  m_Name: TxtQuit
+  m_Name: TxtStartConfirm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5590,7 +5590,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

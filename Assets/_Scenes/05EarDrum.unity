@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.054923847, g: 0.1838242, b: 0.44443616, a: 1}
+  m_IndirectSpecularColor: {r: 0.054941382, g: 0.18403195, b: 0.44405246, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -994,7 +994,7 @@ GameObject:
   - component: {fileID: 302390722}
   - component: {fileID: 302390721}
   m_Layer: 5
-  m_Name: BtnMainMenu
+  m_Name: BtnStartMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1293,7 +1293,7 @@ RectTransform:
   m_Children:
   - {fileID: 510847311}
   m_Father: {fileID: 1360312344}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1714,7 +1714,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 4
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2237,7 +2237,7 @@ GameObject:
   - component: {fileID: 675146298}
   - component: {fileID: 675146297}
   m_Layer: 5
-  m_Name: PanelQuitOptions
+  m_Name: PanelStartOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3142,7 +3142,7 @@ RectTransform:
   m_Children:
   - {fileID: 1960168582}
   m_Father: {fileID: 1360312344}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -3308,7 +3308,7 @@ GameObject:
   - component: {fileID: 962221747}
   - component: {fileID: 962221746}
   m_Layer: 5
-  m_Name: TxtQuit
+  m_Name: TxtStartConfirm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3797,7 +3797,7 @@ RectTransform:
   m_Children:
   - {fileID: 17838275}
   m_Father: {fileID: 1360312344}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5353,13 +5353,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1081390768}
-  - {fileID: 1912848873}
-  - {fileID: 994956423}
-  - {fileID: 317149890}
   - {fileID: 868864063}
   - {fileID: 2012224315}
   - {fileID: 1949066905}
   - {fileID: 1425433569}
+  - {fileID: 1912848873}
+  - {fileID: 994956423}
+  - {fileID: 317149890}
   - {fileID: 495751175}
   - {fileID: 24135084}
   m_Father: {fileID: 0}
@@ -5600,11 +5600,11 @@ RectTransform:
   - {fileID: 526537166}
   - {fileID: 686169672}
   m_Father: {fileID: 1360312344}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -72.92171, y: -33.783546}
+  m_AnchoredPosition: {x: -72.921715, y: -33.78354}
   m_SizeDelta: {x: 100, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1425433570
@@ -6644,7 +6644,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1360312344}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7131,11 +7131,11 @@ RectTransform:
   - {fileID: 994043979}
   - {fileID: 370919126}
   m_Father: {fileID: 1360312344}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -162.51894, y: -263.01105}
+  m_AnchoredPosition: {x: -162.51883, y: -263.011}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1949066906
@@ -7354,7 +7354,7 @@ GameObject:
   - component: {fileID: 2012224313}
   - component: {fileID: 2012224312}
   m_Layer: 5
-  m_Name: PanelMainMenu
+  m_Name: PanelStartMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7439,11 +7439,11 @@ RectTransform:
   - {fileID: 962221745}
   - {fileID: 675146296}
   m_Father: {fileID: 1360312344}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -162.51894, y: -263.01105}
+  m_AnchoredPosition: {x: -162.51883, y: -263.011}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2014189943
