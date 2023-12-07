@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthBar : MonoBehaviour
+//THIS CLASS CHANGES THE HEALTHBAR ON THE PICTURE QUIZ
 {
     public int totalHealth = 3;
     public GameObject full_healthBar;

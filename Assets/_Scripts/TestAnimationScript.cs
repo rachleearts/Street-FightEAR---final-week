@@ -33,6 +33,7 @@ public class TestAnimationScript : MonoBehaviour
     private GameManager gameManager;
 
     private void Awake()
+    //grab renderers and set colors
     {
         eyesRen = eyes.GetComponent<Renderer>();
         hairRen = hair.GetComponent<Renderer>();
@@ -60,12 +61,13 @@ public class TestAnimationScript : MonoBehaviour
     }
 
     void Update()
+    //fade normal ear texture to bruised ear texture
     {
         Fade(earNormalToHema1Ren, earNormal, earNormalToHema2Ren, earBruised);
     }
 
     void Fade(Renderer ren1, Color color1, Renderer ren2, Color color2)
-    //fades one texture into another
+    //fades one color into another
     {
         if (fade)
         {
@@ -174,6 +176,7 @@ public class TestAnimationScript : MonoBehaviour
     }
 
     public void sceneCaller(int sceneNumber)
+    //calls the Game Manager to change the scene
         {
             gameManager.ChangeScene(sceneNumber);
         }
@@ -203,10 +206,7 @@ public class TestAnimationScript : MonoBehaviour
             yield return null;
         }
     }
-         
     }
-
-
 
     //https://stackoverflow.com/questions/64510141/using-a-coroutine-in-unity3d-to-fade-a-game-object-out-and-back-in-looping-inf
 

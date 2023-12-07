@@ -13,7 +13,7 @@ public class CursorScript : MonoBehaviour
 	}
 
 
-        //When the mouse is no longer over the object the script is attached to, it changed to the default cursor
+        //When the mouse is no longer over the object the script is attached to, it changes to the default cursor
 	private void OnMouseExit()
 	{
                 Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);

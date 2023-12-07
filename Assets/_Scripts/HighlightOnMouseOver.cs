@@ -26,12 +26,14 @@ public class HighlightOnMouseOver : MonoBehaviour
         StartCoroutine("HighlightFlicker");
     }
         void OnMouseEnter()
+        //ear changes between original material and selected material when mouse is over object
     {
         isFlicker = false;
         flickerAnimation.SetBool("FlashOn",false);
         gameObject.GetComponent<Renderer>().material = EarSelected;
     }
     void OnMouseExit()
+    //no highlight when mouse is not over object
     {
         gameObject.GetComponent<Renderer>().material = OriginalColor;
     }
@@ -46,6 +48,7 @@ public class HighlightOnMouseOver : MonoBehaviour
 
 
     IEnumerator HighlightFlicker()
+    //ear flicker only begins when the ear has not been selected and it has been over 5f
     {
         yield return new WaitForSeconds(5.0f);
         isFlicker = true;

@@ -1,17 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SecondClick : MonoBehaviour
 {
     bool isClicked;
     public GameObject myFirstPanel;
 
-
-    // Removing the panel set active on second click
     public void Close()
     {
+        //When the button this script is attached to is clicked for the first time, it sets the panel active
         isClicked = !isClicked;
 
         if(isClicked == true)
@@ -19,6 +17,7 @@ public class SecondClick : MonoBehaviour
             myFirstPanel.SetActive(true);
         }
 
+        //When the button this script is attached to is clicked for the second time, it sets the panel false
         if(isClicked == false)
         {
             myFirstPanel.SetActive(false);

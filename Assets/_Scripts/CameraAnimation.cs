@@ -10,11 +10,11 @@ public class CameraAnimation : MonoBehaviour
 
     public Transform head;
 
-    void Update() {
+    void Update() 
+    {
         if (!doAnimation) return;
 
         float yRot = head.eulerAngles.y;
-        //Debug.Log(yRot);
 
         if (yRot < 0.01f) {
             cameraZoom.SetTrigger("EarZoomTrigger");
@@ -22,7 +22,7 @@ public class CameraAnimation : MonoBehaviour
             doAnimation = false;
         } else {
             lerpValue += Time.deltaTime;
-            head.eulerAngles = Vector3.Lerp(head.eulerAngles, Vector3.zero, lerpValue * .1f);
+            head.eulerAngles = Vector3.Lerp(head.eulerAngles, Vector3.zero, lerpValue * .1f); 
         }
 
     }
@@ -30,6 +30,6 @@ public class CameraAnimation : MonoBehaviour
     void OnMouseDown()
     {
         doAnimation = true;
-        HeadRotation.zoomedIn = true;
+        HeadRotation.zoomedIn = true; //select ear to trigger zoom animation
     }
 }

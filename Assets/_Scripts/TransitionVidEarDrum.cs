@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class TransitionVidEarDrum : MonoBehaviour
+//SCRIPT CALLED WHEN NEXT ARROW IS CLICKED ON THE EARDRUM SCENE. CONTROLS EARDRUM SCENE.
 {
 
     public GameObject videoPanel;
@@ -12,42 +13,29 @@ public class TransitionVidEarDrum : MonoBehaviour
     public GameObject punchButton;
     public Animator earDrumTear;
     public AudioSource tearTinAudio;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     
     public void PlayCoroutine()
+    //Coroutine below starts. The punch button becomes inactive.
     {
         StartCoroutine(TransitionVideoTear());
         punchButton.SetActive(false);
     }
         
-    // Update is called once per frame
     IEnumerator TransitionVideoTear()
+    //all UI panels set inactive
+    //set the video panel active which plays the 2D animation
+    //after 4 seconds, set the animation inactive and play the ear drum tear animation / tinnitus audio
     {
         videoPanel.SetActive(true);
         textPanel1.SetActive(false);
         textPanel2.SetActive(true);
 
         yield return new WaitForSeconds(4f);
-        Debug.Log("4s over");
 
         videoPanel.SetActive(false);
-        //earDrumTear.Play();
-        
         earDrumTear.SetTrigger("play_eardrum_tear");
         tearTinAudio.Play();
 
 
     }
-        
-        //function1(exe)
-        //fucntion2(exe)
-
-        //void function1
-
-
 }

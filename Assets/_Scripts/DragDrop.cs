@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
+    //Script part of the drag and drop quiz scene. This works alongside the DropSlot script.
     [SerializeField] private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup; 
@@ -26,19 +27,20 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     }
 
 
-    //When the text box is dragged, 
+    //When the text box is dragged, the raycast is not blocked so that the underlying drop boxes can be identified
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = false;
     }
 
+    //when the text box is dragged, it is moved with the cursor position. Keeps scale of the canvas.
     public void OnDrag(PointerEventData eventData)
     {
         Debug.Log("on drag");
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
-    //
+    //When the text box is dropped, the raycast is blocked again
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("on end drag");

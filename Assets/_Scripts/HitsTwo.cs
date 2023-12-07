@@ -69,14 +69,14 @@ public class HitsTwo : MonoBehaviour
         {
             case 1:
             Debug.Log("hit1");
-            //hit1text.SetActive(true);
+            
             HB0.SetActive(false);
             HB1.SetActive(true);
             StartCoroutine("DelayText", hit1text);
             audioManager.SlapAudioTrigger();
             testAnimationScript.EarAnim2();
             //if adio hasnt played bool = false if audio has played bool = true if 
-            //fix in audio manager to play random range once 
+            //in audio manager plays random range once 
             break;
 
             case 2:
@@ -86,7 +86,6 @@ public class HitsTwo : MonoBehaviour
             HB2.SetActive(true);
             StartCoroutine("DelayText", hit2text);
             hit1text.SetActive(false);
-            //hit2text.SetActive(true);
             testAnimationScript.EarAnim3();
             break;
             
@@ -97,7 +96,6 @@ public class HitsTwo : MonoBehaviour
             HB3.SetActive(true);
             hit2text.SetActive(false);
             StartCoroutine("DelayText", hit3text);
-            //hit3text.SetActive(true);
             testAnimationScript.EarAnim4();
             break;
 
@@ -108,7 +106,6 @@ public class HitsTwo : MonoBehaviour
             HB4.SetActive(true);
             hit3text.SetActive(false);
             StartCoroutine("DelayText", hit4text);
-            //hit4text.SetActive(true);
             testAnimationScript.EarAnim5();
             break;
 
@@ -119,7 +116,6 @@ public class HitsTwo : MonoBehaviour
             HB5.SetActive(true);
             hit4text.SetActive(false);
             StartCoroutine("DelayText", hit5text);
-            //hit5text.SetActive(true);
             testAnimationScript.EarAnim6();
             break;
 
@@ -128,7 +124,6 @@ public class HitsTwo : MonoBehaviour
             audioManager.SlapAudioTrigger();
             hit5text.SetActive(false);
             StartCoroutine("DelayText", hit6text);
-            //hit6text.SetActive(true);
             testAnimationScript.EarAnim7();
             break;
 
@@ -136,7 +131,6 @@ public class HitsTwo : MonoBehaviour
             Debug.Log("hit7");
             MyCanvas.SetActive(false);
             testAnimationScript.EarAnim8();
-            //testAnimationScript.TransitionToEardrum();
             break;
 
         }
@@ -148,6 +142,7 @@ public class HitsTwo : MonoBehaviour
 
 
     IEnumerator DelayText(GameObject text)
+    //text will not be displayed until after animation has played out
     {
         yield return new WaitForSeconds(1f);
         text.SetActive(true);

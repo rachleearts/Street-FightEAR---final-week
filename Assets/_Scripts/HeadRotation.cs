@@ -10,6 +10,7 @@ public class HeadRotation : MonoBehaviour
     public static bool zoomedIn;
   
     private void OnMouseDrag()
+    //able to click and drag on head object to rotate it around the y axis
     {
         if (zoomedIn) return;
         

@@ -78,6 +78,8 @@ public class AudioManager : MonoBehaviour
 		VolumeChanger();
 	}
 
+    //Called in the hits script. 
+    //Plays a randomised audio clip from the slap compilation
     public void SlapAudioTrigger()
     {
         slapCompilation.clip =  slapSounds[Random.Range(0, slapSounds.Length)];
