@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class ButtonCaller : MonoBehaviour
 {
-    
     private GameManager gameManager;
     
-// Start is called before the first frame update
+    //At the start of the scene, find any object of type 'GameManager'
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
-    
     }
 
-   public void sceneCaller(int sceneNumber)
+    //Function which calls the game manager to change scene
+    public void SceneCaller(int sceneNumber)
     {
         gameManager.ChangeScene(sceneNumber);
     }
     
-    public void quitGame( )
+    //Function which calls the game manager to quit
+    public void QuitGame( )
     {
         gameManager.Quit();
     }

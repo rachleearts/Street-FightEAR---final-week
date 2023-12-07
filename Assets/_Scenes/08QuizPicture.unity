@@ -960,7 +960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &236936525
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1519,7 +1519,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 353069980}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: sceneCaller
+        m_MethodName: SceneCaller
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1937,7 +1937,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 416980068}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: sceneCaller
+        m_MethodName: SceneCaller
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3765,7 +3765,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 797546555}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: quitGame
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4206,7 +4206,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 813376336}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: sceneCaller
+        m_MethodName: SceneCaller
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4352,7 +4352,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 853952746}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: sceneCaller
+        m_MethodName: SceneCaller
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8127,7 +8127,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1664656683}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: sceneCaller
+        m_MethodName: SceneCaller
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

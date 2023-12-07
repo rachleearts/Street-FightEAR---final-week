@@ -11,22 +11,24 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     public int id; 
     public Vector2 initPosition;
 
+    //On awake, get the rect transform component of the answer text box and the canvas group attached to it
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
-        //initPosition = transform.position;
     }
-    //Detect current clicks on the GameObject (the one with the script attached)
 
+
+    //On start, detect current location of the answer text box and call it the initial position
     void Start()
     {
         initPosition = gameObject.transform.position;
     }
 
+
+    //When the text box is dragged, 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("on begin drag");
         canvasGroup.blocksRaycasts = false;
     }
 
@@ -35,12 +37,16 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
         Debug.Log("on drag");
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
+
+    //
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("on end drag");
         canvasGroup.blocksRaycasts = true;
     }
 
+
+    //Placing the text box to its initial position identified in Start()
     public void ResetPosition()
     {
         transform.position = initPosition;

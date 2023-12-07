@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 311876634}
   - component: {fileID: 311876633}
   m_Layer: 5
-  m_Name: PanelQuitOptions
+  m_Name: PanelQuizOptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1016,7 +1016,7 @@ GameObject:
   - component: {fileID: 323663048}
   - component: {fileID: 323663047}
   m_Layer: 5
-  m_Name: TxtQuit
+  m_Name: TxtQuizConfirm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3051,6 +3051,7 @@ GameObject:
   - component: {fileID: 912161758}
   - component: {fileID: 912161757}
   - component: {fileID: 912161756}
+  - component: {fileID: 912161759}
   m_Layer: 5
   m_Name: BtnYes
   m_TagString: Untagged
@@ -3123,9 +3124,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2002226653}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Quit
+      - m_Target: {fileID: 912161759}
+        m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3173,6 +3174,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912161754}
   m_CullTransparentMesh: 1
+--- !u!114 &912161759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912161754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3063cab1b0cbf0a4395c12d0df08d2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &932878040
 GameObject:
   m_ObjectHideFlags: 0
@@ -5869,7 +5882,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 588700040}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: sceneCaller
+        m_MethodName: SceneCaller
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7230,12 +7243,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2120731905}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: quitGame
-        m_Mode: 1
+        m_MethodName: SceneCaller
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

@@ -1397,7 +1397,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 527299973}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: sceneCaller
+        m_MethodName: SceneCaller
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3528,7 +3528,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1203592473}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: quitGame
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

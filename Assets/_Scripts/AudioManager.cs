@@ -14,44 +14,24 @@ public class AudioManager : MonoBehaviour
     public AudioClip [] slapSounds;    
 
 
-   //Keep a single game object with background audio to transfer between scenes
+   //Singleton: keep a single game object containing background audio, destroy all others
    void Awake()
-   {
-      if (singleton == null) {
+    {
+        if (singleton == null) 
+        {
             singleton = this;
-        } else if (singleton!= this) {
+        } 
+        
+        else if (singleton!= this) 
+        {
             Destroy(gameObject);
         }
   
-   DontDestroyOnLoad(transform.gameObject);
-
-   
-
-    // if (!PlayerPrefs.HasKey("background volume"))
-    //     {
-    //         PlayerPrefs.SetFloat("background volume", 1f);
-    //         Load();
-    //     }
-       
-    //if no player prefs set, set volume to 1; otherwise load player prefs
-
-    // if (!PlayerPrefs.HasKey("background volume"))
-    //     {
-    //         PlayerPrefs.SetFloat("background volume", 1);
-    //         //Load();
-    //         //Save();
-    //     }
-    // else
-    //     {
-    //         Load();
-    //     }
-       
-
-       
-
-   }
+        DontDestroyOnLoad(transform.gameObject);   
+    }
     
-   //change audio volume with slider
+
+    //Find the audio panel on the canvas which contains the volume slider. When the slider is changed, get ValueChangeCheck and Save functions to commence.
 
     void Start()
     {
@@ -59,9 +39,18 @@ public class AudioManager : MonoBehaviour
         volumeSlider = audioSettings.GetComponentInChildren<Slider>();
         volumeSlider.onValueChanged.AddListener (delegate {ValueChangeCheck ();});
         Save();
-        //Load();
     }
 
+    //On new scene, find the panel audio and the slider. Set the value and volume to the player prefs.
+    void OnLevelWasLoaded()
+    { 
+        audioSettings = GameObject.Find("PanelAudio");
+        volumeSlider = audioSettings.GetComponentInChildren<Slider>();
+        volumeSlider.onValueChanged.AddListener (delegate {ValueChangeCheck ();});
+        Load();
+    }
+
+    //The background volume picked up by the audio listener is equal to the position on the volume slider. This volume is saved.
     public void VolumeChanger()
     {
         AudioListener.volume = volumeSlider.value;
@@ -69,41 +58,31 @@ public class AudioManager : MonoBehaviour
     }
 
     
-        //Save player preferences
-        //save volume
+    //Save player preference for background volume correlating to the set slider position
+    //Save volume
+    public void Save()
+    {
+        PlayerPrefs.SetFloat("background volume", volumeSlider.value);
+    }
 
-        public void Save()
-        {
-            PlayerPrefs.SetFloat("background volume", volumeSlider.value);
-        }
+
+    //Load player preferences: the value on the slider equals the background volume player pref.
+    public void Load()
+    {
+        volumeSlider.value = PlayerPrefs.GetFloat("background volume");
+    }
 
 
-        //Load player preferences
+    //Calls the VolumeChanger function
+    public void ValueChangeCheck()
+	{
+		VolumeChanger();
+	}
 
-        public void Load()
-        {
-            volumeSlider.value = PlayerPrefs.GetFloat("background volume");
-        }
-
-        //on new scene find the panel audio, find its slider and set the value and volume to the player prefs
-        void OnLevelWasLoaded()
-        { 
-           audioSettings = GameObject.Find("PanelAudio");
-           volumeSlider = audioSettings.GetComponentInChildren<Slider>();
-           volumeSlider.onValueChanged.AddListener (delegate {ValueChangeCheck ();});
-           Load();
-           Debug.Log("Loaded");
-        }
-
-        public void ValueChangeCheck()
-	    {
-		    VolumeChanger();
-	    }
-
-        public void SlapAudioTrigger()
-        {
-            slapCompilation.clip =  slapSounds[Random.Range(0, slapSounds.Length)];
-            slapCompilation.Play();
-        }
+    public void SlapAudioTrigger()
+    {
+        slapCompilation.clip =  slapSounds[Random.Range(0, slapSounds.Length)];
+        slapCompilation.Play();
+    }
 
 }

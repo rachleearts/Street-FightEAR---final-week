@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 17838279}
   - component: {fileID: 17838281}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonPunch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1273,7 +1273,7 @@ GameObject:
   - component: {fileID: 317149892}
   - component: {fileID: 317149891}
   m_Layer: 5
-  m_Name: EarDrumTearTxt (1)
+  m_Name: EarDrumTearTxt2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1552,7 +1552,7 @@ GameObject:
   - component: {fileID: 495751177}
   - component: {fileID: 495751176}
   m_Layer: 5
-  m_Name: PanelAnatomyLabels1
+  m_Name: PanelAnatomyLabels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1709,7 +1709,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 510847315}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: sceneCaller
+        m_MethodName: SceneCaller
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2176,7 +2176,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 669609576}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: sceneCaller
+        m_MethodName: SceneCaller
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3248,7 +3248,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 878704040}
         m_TargetAssemblyTypeName: ButtonCaller, Assembly-CSharp
-        m_MethodName: quitGame
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3777,7 +3777,7 @@ GameObject:
   - component: {fileID: 994956423}
   - component: {fileID: 994956424}
   m_Layer: 5
-  m_Name: ButnHolder
+  m_Name: BtnHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4167,7 +4167,7 @@ GameObject:
   - component: {fileID: 1082662729}
   - component: {fileID: 1082662728}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TxtArrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6625,7 +6625,7 @@ GameObject:
   - component: {fileID: 1912848875}
   - component: {fileID: 1912848874}
   m_Layer: 5
-  m_Name: EarDrumTearTxt
+  m_Name: EarDrumTearTxt1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
