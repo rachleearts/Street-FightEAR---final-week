@@ -29,10 +29,8 @@ public class TestAnimationScript : MonoBehaviour
     float fadein = 0.0f;
 
     public float fadeSpeed = 1.0f;
-
-
+    
     private GameManager gameManager;
-
 
     private void Awake()
     {
@@ -64,16 +62,6 @@ public class TestAnimationScript : MonoBehaviour
     void Update()
     {
         Fade(earNormalToHema1Ren, earNormal, earNormalToHema2Ren, earBruised);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //set everything to initial state
-        //earRen.material = earMat1;
-        //skullRen.material = skullMat1;
-        //arteryRen.material = arteryMat1;
-
     }
 
     void Fade(Renderer ren1, Color color1, Renderer ren2, Color color2)
@@ -202,12 +190,6 @@ public class TestAnimationScript : MonoBehaviour
         fadeToBlack.SetActive(true);
         StartCoroutine(CrossfadeMaterial(5.0f, fadeToBlackRen, fadeToBlackRen.material, blackMat));
     }
-        
-    /* public void TransitionToEardrum()
-    {
-        StartCoroutine(SceneTransitionWait(sceneCaller(3)));
-    } */
-
 
     private IEnumerator CrossfadeMaterial(float duration, Renderer ren, Material mat1, Material mat2)
     //fades one material into another over a defined duration of time
@@ -220,14 +202,7 @@ public class TestAnimationScript : MonoBehaviour
             ren.material.Lerp(mat1, mat2, elapsedTime / duration);
             yield return null;
         }
-
     }
-
-    /* private IEnumerator SceneTransitionWait()
-    //fades one material into another over a defined duration of time
-    {
-        yield return new WaitForSeconds (5f); 
-    } */
          
     }
 

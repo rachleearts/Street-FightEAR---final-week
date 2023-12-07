@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class TestAnimation2Script : MonoBehaviour
 {
     public Renderer earNormalToHemaRen;
@@ -55,3 +55,4 @@ public class TestAnimation2Script : MonoBehaviour
 	
 
 }   
+*/
