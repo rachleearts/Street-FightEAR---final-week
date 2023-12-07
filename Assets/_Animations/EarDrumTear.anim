@@ -170,7 +170,7 @@ AnimationClip:
   - time: 0.75
     functionName: AnimTrigger
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 358a9404f1bd60c4184406f75ffdc88d, type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

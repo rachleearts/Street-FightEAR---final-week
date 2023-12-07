@@ -8,15 +8,17 @@ public class SwitchFightScene : MonoBehaviour
     public VideoPlayer videoPlayer;
     private GameManager gameManager;
 
-    // Start is called before the first frame update
+    //On Start, find the game manager.
+    //When the end of the video is reached, do ChangeFigthScene function
     void Start()
     {
         videoPlayer.loopPointReached += ChangeFightScene;
         gameManager = FindAnyObjectByType<GameManager>();      
     }
 
+    //Call the game manager to change scene at the end of the video
     void ChangeFightScene(VideoPlayer videoplayer)
     {
-        gameManager.ChangeScene(4);
+        gameManager.ChangeScene(3);
     }
 }

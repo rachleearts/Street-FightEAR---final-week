@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EardrumSceneController : MonoBehaviour
+//THIS CLASS CONTROLS THE EARDRUM
 {
     public GameObject fadeToBlack;
-
     public Material transparentMat;
-
     public Animator eardrumRipAnim;
-
     public AudioSource eardrumRipSound;
-
 
     Renderer fadeToBlackRen;
 
@@ -21,10 +18,10 @@ public class EardrumSceneController : MonoBehaviour
 	}
 
     public void PlayEardrumTear()
+    //play eardrum tear animation and sfx
     {
         eardrumRipAnim.SetTrigger("play_eardrum_tear");
         eardrumRipSound.Play();
-
     }
 
   

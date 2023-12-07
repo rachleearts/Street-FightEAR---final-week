@@ -18,8 +18,7 @@ public class CameraAnimation : MonoBehaviour
 
         if (yRot < 0.01f) {
             cameraZoom.SetTrigger("EarZoomTrigger");
-            //HIT interactino must be complete then trigger middle ear zoom on last hit
-            //cameraZoom.SetTrigger("MiddleEarZoomTrigger");
+            //head rotates back to origin before animation to zoom is triggered
             doAnimation = false;
         } else {
             lerpValue += Time.deltaTime;
