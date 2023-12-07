@@ -52,6 +52,14 @@ public class QuizHealth : MonoBehaviour
                         GameObject.Find("PanelEarPicture").SetActive(false);
                         submitButton = GameObject.Find("BtnConfirm");
                         submitButton.SetActive(false);
+
+                        welcomeText.SetActive(false);
+                        startMenu.SetActive(false);
+                        quizMenu.SetActive(false);
+                        welcomeInstructions.SetActive(false);
+
+                        notQuite.SetBool("play_score4",false);
+
                         break;
                     }
         }
@@ -83,7 +91,7 @@ public class QuizHealth : MonoBehaviour
             quizMenu.SetActive(false);
             welcomeInstructions.SetActive(false);
 
-            wellDone.SetTrigger("play_score5");
+            wellDone.SetBool("play_score5",false);
          }
 
          else
@@ -110,7 +118,7 @@ public class QuizHealth : MonoBehaviour
             quizMenu.SetActive(false);
             welcomeInstructions.SetActive(false);
 
-            notQuite.SetTrigger("play_score4");
+            notQuite.SetBool("play_score4",false);
          }
       }
 

@@ -22,6 +22,8 @@ public class QuizManager : MonoBehaviour
     public GameObject btnMenu;
     public GameObject btnStart;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,16 +73,19 @@ public class QuizManager : MonoBehaviour
             btnStart.SetActive(false);
             btnMenu.SetActive(false);
 
-        }
-
         if( scoreNB > 4) 
         {   
 
-            wellDone.SetTrigger("play_score5");
+            wellDone.SetBool("play_score5", false);
         }
         else
         {
-            notQuite.SetTrigger("play_score4");
+            notQuite.SetBool("play_score4", false );
         }
+            
+
+        }
+
+       
     }
 }
