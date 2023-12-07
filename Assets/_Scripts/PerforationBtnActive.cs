@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class SetbtnActive : MonoBehaviour
+public class PerforationBtnActive : MonoBehaviour
 {
     public GameObject buttonPerf;
 
