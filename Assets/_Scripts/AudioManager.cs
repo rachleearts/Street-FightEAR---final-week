@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement; 
+using UnityEngine.UI; 
 
 public class AudioManager : MonoBehaviour
 
@@ -14,7 +13,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip [] slapSounds;    
 
 
-   //Singleton: keep a single game object containing background audio, destroy all others
+   //Singleton: keepx a single game object containing background audio, destroys all others
    void Awake()
     {
         if (singleton == null) 
@@ -32,7 +31,6 @@ public class AudioManager : MonoBehaviour
     
 
     //Find the audio panel on the canvas which contains the volume slider. When the slider is changed, get ValueChangeCheck and Save functions to commence.
-
     void Start()
     {
         audioSettings = GameObject.Find("PanelAudio");
@@ -42,6 +40,7 @@ public class AudioManager : MonoBehaviour
     }
 
     //On new scene, find the panel audio and the slider. Set the value and volume to the player prefs.
+    //If the slider is changed, ValueChangeCheck function commences
     void OnLevelWasLoaded()
     { 
         audioSettings = GameObject.Find("PanelAudio");
@@ -50,7 +49,7 @@ public class AudioManager : MonoBehaviour
         Load();
     }
 
-    //The background volume picked up by the audio listener is equal to the position on the volume slider. This volume is saved.
+    //The background volume picked up by the audio listener is equal to the position on the volume slider. This volume is saved (see Save function).
     public void VolumeChanger()
     {
         AudioListener.volume = volumeSlider.value;

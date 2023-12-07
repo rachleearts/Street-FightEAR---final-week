@@ -2,25 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //Create variable that is static and shared between all game managers
+    //Create singleton variable that is static throughout all scenes
     public static GameManager singleton; 
     
-
-    
+    //On awake, singleton pattern commences. If there is is no game manager, keep this one. If there is another game manager, destroy this.
     void Awake() 
     {
-
-        //Singleton
-
-        if (singleton == null) {
+        if (singleton == null) 
+        {
             singleton = this;
         }
         
-        else if (singleton != this) {
+        else if (singleton != this) 
+        {
             Destroy(gameObject);
         }
 
@@ -28,23 +25,17 @@ public class GameManager : MonoBehaviour
     }
 
 
-    //Change scene with index number
+    //Public function: change scene using the scene index number from the build. 
     public void ChangeScene (int sceneIndex) 
     {
         SceneManager.LoadScene(sceneIndex);
     }
 
-    //End game
+    //Public function: use this to end the game
     public void Quit() 
     {
-    Debug.Log("The Application has quit.");
         Application.Quit();
     }
 
-    
-
 }
 
-//Health meter with switch statements
-
-    //Play audio on start (constant audio)
