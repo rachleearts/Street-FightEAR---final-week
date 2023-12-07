@@ -36,14 +36,12 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     //when the text box is dragged, it is moved with the cursor position. Keeps scale of the canvas.
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("on drag");
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     //When the text box is dropped, the raycast is blocked again
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("on end drag");
         canvasGroup.blocksRaycasts = true;
     }
 
