@@ -37,6 +37,7 @@ public class AudioManager : MonoBehaviour
         volumeSlider = audioSettings.GetComponentInChildren<Slider>();
         volumeSlider.onValueChanged.AddListener (delegate {ValueChangeCheck ();});
         Save();
+        PlayerPrefs.Save();
     }
 
     //On new scene, find the panel audio and the slider. Set the value and volume to the player prefs.
@@ -62,6 +63,7 @@ public class AudioManager : MonoBehaviour
     public void Save()
     {
         PlayerPrefs.SetFloat("background volume", volumeSlider.value);
+        PlayerPrefs.Save();
     }
 
 
